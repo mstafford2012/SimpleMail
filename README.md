@@ -32,6 +32,8 @@ Then back to the inbox:
 
 And the message is marked as viewed.
 
+Also, messages can be sent to 'all' which means broadcast the message to everyone on your network, So one person can send the same message to everyone.
+
 #### All Commands
  
        simplemail (<ip> or <alias>) \"<Message>\"  Send a message"
