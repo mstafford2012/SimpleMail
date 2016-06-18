@@ -7,7 +7,7 @@ ALIASES_FILENAME = 'simplemail_aliases'
 
 def get_aliases():
 
-    alias_file = open('/home/milton/.bin/SimpleMail/simplemail_aliases', 'r')
+    alias_file = open('/opt/SimpleMail/simplemail_aliases', 'r')
     aliases = json.load(alias_file)
     alias_file.close()
 
@@ -15,7 +15,7 @@ def get_aliases():
 
 def get_mail():
 
-    mail_file = open('/home/milton/.bin/SimpleMail/simplemail_store', 'r')
+    mail_file = open('/opt/SimpleMail/simplemail_store', 'r')
     mail = json.load(mail_file)
     mail_file.close()
 
