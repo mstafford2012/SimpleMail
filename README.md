@@ -8,15 +8,15 @@ View inbox `simplemail inbox` Result:
 
 
 ```
-0 [ ] Milton: Hey this is just to see how the inbox looks, espec...
-1 [ ] Milton: Hey Milton, How's it going?
-2 [ ] Milton: test
+0 [ ] Stephen: Hey this is just to see how the inbox looks, espec...
+1 [ ] Aaron: Hey Milton, How's it going?
+2 [ ] Tyler: test
 ```
 
 Then we read a message: `simplemail inbox 0`:
 
 ```
-From: Milton Fri Jun 17, 2016 11:32:48 PM
+From: Stephen Fri Jun 17, 2016 11:32:48 PM
 --------------------------------------------------
 Hey this is just to see how the inbox looks,
 especially when a single message is viewed.
@@ -25,9 +25,9 @@ especially when a single message is viewed.
                  
 Then back to the inbox:
 ```
-0 [x] Milton: Hey this is just to see how the inbox looks, espec...
-1 [ ] Milton: Hey Milton, How's it going?
-2 [ ] Milton: test
+0 [x] Stephen: Hey this is just to see how the inbox looks, espec...
+1 [ ] Aaron: Hey Milton, How's it going?
+2 [ ] Tyler: test
 ```
 
 And the message is marked as viewed.
