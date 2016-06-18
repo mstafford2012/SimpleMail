@@ -1,4 +1,4 @@
-# SimpleMail v0.1
+# SimpleMail v0.1 for Linux
 
 For easily sending messages and reading sent messages in terminal.
 
