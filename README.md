@@ -36,8 +36,8 @@ Also, messages can be sent to 'all' which means broadcast the message to everyon
 
 #### All Commands
  
-       simplemail (<ip> or <alias>) \"<Message>\"  Send a message
-       simplemail all \"<Message>\"          Broadcast a message to your network
+       simplemail (<ip> or <alias>) "<Message>"  Send a message
+       simplemail all "<Message>"            Broadcast a message to your network
        simplemail alias <name> <ip-address>  Set an alias
        simplemail alias                      See all aliases
        simplemail inbox                      Show all received messages
