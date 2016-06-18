@@ -43,3 +43,10 @@ And the message is marked as viewed.
        simplemail delete <int>               Delete a single message"
        simplemail delete all                 Delete all messages"
        simplemail delete read                Delete all read messages"
+
+
+
+This is a very early version, so create some issues with ideas for improvements, and expect to see more features!
+
+
+Also, as of now, I am the only author.
