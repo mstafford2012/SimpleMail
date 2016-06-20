@@ -39,6 +39,14 @@ def get_alias(ip):
         return ip
 
 
+def set_aliases(aliases):
+
+    alias_file = open(ALIASES_FILENAME, 'w')
+    alias_file.write(json.dumps(aliases))
+    alias_file.flush()
+    alias_file.close()
+
+
 lib_outward_ip = (
     [l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1],
                  [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in

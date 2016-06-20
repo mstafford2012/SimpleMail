@@ -48,7 +48,16 @@ def delete_message(args):
 
         elif all(char.isdigit() for char in args[2]):
             mail = collections.OrderedDict(reversed(sorted(get_mail().items())))
-            del mail[mail.items()[int(args[2])][0]]
+
+            if len(mail) == 0:
+                print "No mail. ", offer_help
+                exit(1)
+            elif len(mail) >= args[2]:
+                del mail[mail.items()[int(args[2])][0]]
+            else:
+                print "No mail at index ", args[2], ". ", offer_help
+                exit(1)
+
             set_mail(mail)
 
         elif args[2] == 'read':
@@ -62,9 +71,11 @@ def delete_message(args):
 
         else:
             print args[2] + " didn't match for 'delete' command... ", offer_help
+            exit(1)
 
     else:
         print "Wrong number of arguments for delete... ", offer_help
+        exit(1)
 
 
 def send_message(aliases, args, outward_ip):
@@ -100,25 +111,26 @@ def send_message(aliases, args, outward_ip):
 
 
 def alias_command(aliases, args):
-    if len(args) == 4:
 
-        alias_file = open(ALIASES_FILENAME, 'w')
+    if len(args) == 4:
 
         try:
             ipaddr.IPv4Network(args[3])
             aliases[args[2]] = args[3]
-
         except ValueError, ipaddr.AddressValueError:
             print "Expected an IP address ", offer_help
+            exit(1)
 
-        alias_file.write(json.dumps(aliases))
-        alias_file.flush()
-        alias_file.close()
+        set_aliases(aliases)
 
-    else:
+    elif len(args) == 2:
 
         for key in aliases:
             print key, aliases[key]
+
+    else:
+        print "Wrong number of arguments. ", offer_help
+        exit(1)
 
 
 def show_inbox(args):
@@ -186,5 +198,6 @@ def show_help():
 if __name__ == "__main__":
 
     main(sys.argv)
+    exit(0)
 
 
