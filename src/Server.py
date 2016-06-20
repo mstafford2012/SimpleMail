@@ -1,4 +1,3 @@
-import socket
 import ipaddr
 import threading
 from SimpleMail_lib import *
